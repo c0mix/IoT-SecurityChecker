@@ -3,7 +3,7 @@ import ast
 from Utils import *
 from bruteForcers import SSH_BruteForcer, FTP_BruteForcer, Telnet_BruteForcer, HTTP_BruteForcer
 from databases import DataBase_Class
-from exploits import h264_dvr_rce, rom_0, Cisco_PVC_2300, Humax_HG100R, dlink, tv_ip410wn, SumppleSploit
+from exploits import h264_dvr_rce, rom_0, Cisco_PVC_2300, Humax_HG100R, dlink, tv_ip410wn
 from parsers import Masscan_Parser_Class
 from scanners import Masscan_Scanner
 
