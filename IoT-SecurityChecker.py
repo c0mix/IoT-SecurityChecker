@@ -105,7 +105,7 @@ if __name__=='__main__':
         if len(telnet_list)>0:
             logging.info(O+'Starting Telnet brute forcing'+W)
             telnetBrute = Telnet_BruteForcer.Telnet_BruteForcer(target_list=telnet_list,
-                                                                credfile='resources/Telnet_credentials.txt',
+                                                                credfile='resources/wordlists/Telnet_credentials.txt',
                                                                 thread=args.threads)
             findings = telnetBrute.run()
 
@@ -124,7 +124,7 @@ if __name__=='__main__':
         if len(ssh_list)>0:
             logging.info(O+'Starting SSH brute forcing'+W)
             sshBrute = SSH_BruteForcer.SSH_BruteForcer(target_list=ssh_list,
-                                                       credfile='resources/SSH_credentials.txt',
+                                                       credfile='resources/wordlists/SSH_credentials.txt',
                                                        thread=args.threads)
             findings = sshBrute.run()
             if len(findings) > 0:
@@ -142,7 +142,7 @@ if __name__=='__main__':
         if len(ftp_list)>0:
             logging.info(O+'Starting FTP brute forcing'+W)
             ftpBrute = FTP_BruteForcer.FTP_BruteForcer(target_list=ftp_list,
-                                                       credfile='resources/FTP_credentials.txt',
+                                                       credfile='resources/wordlists/FTP_credentials.txt',
                                                        thread=args.threads)
             findings = ftpBrute.run()
             if len(findings) > 0:
@@ -163,7 +163,7 @@ if __name__=='__main__':
                 logging.info(O+'Starting HTTP brute forcing with %s authtype'%authtype +W)
                 httpBrute = HTTP_BruteForcer.HTTP_BruteForcer(target_list=http_list,
                                                           authtype=authtype,
-                                                          credfile='resources/HTTP_credentials.txt')
+                                                          credfile='resources/wordlists/HTTP_credentials.txt')
                 findings = httpBrute.run()
                 if len(findings) > 0:
                     for i in findings:
