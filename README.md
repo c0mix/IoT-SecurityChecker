@@ -17,7 +17,7 @@ Below is provided a list of the main activity and probe that IoT-SecurityCheker 
 - CVE-2017-17101 [Exploit][8] (tested but NOT IN THE SOURCE due to responsible disclosure)
  
 ### Architecture
-![alt text](https://github.com/c0mix/IoT-SecurityChecker/resources/images/architettura.png "Architecture")
+![alt text](/resources/images/architettura.png "Architecture")
 
 ### Case Study
 
