@@ -97,6 +97,7 @@ if __name__=='__main__':
     for iot in sorted(list(set(iot_list))):
         logging.info(G+iot+W)
 
+    # Bruteforce Checks
     if check_test_args(args.bruteforce, 'telnet'):
         db = DataBase_Class.Database()
         rows = db.extract_Telnet_ip(tab_name)
@@ -172,6 +173,8 @@ if __name__=='__main__':
         else:
             logging.warning(R + 'No suitable hosts found for HTTP Bruteforce' + W)
 
+
+    # Exploit Checks
     if check_test_args(args.exploits, 'DVR'):
         db = DataBase_Class.Database()
         rows = db.extract_DVR_ip(tab_name)
