@@ -83,7 +83,7 @@ pip3 install -r requirements.txt
 ```
 5. Run the program giving sudo privileges or with root user:
 ```bash
-python3 IoT-SecurityChecker.py <target> <options>
+sudo python3 IoT-SecurityChecker.py <target> <options>
 ```
 
 ### Case Study
@@ -91,7 +91,7 @@ We run the IoT Security Checker in a custom scenario that have been built
 specifically to satisfy the tools characteristics. The following figure shows the networks
 with all nodes. 
 ![alt text](/resources/images/testcase.png "Test Case Lab")
-The experimental scenario is composed of a private network containing the scanner node, a vulnerable wireless cam and a Cloud Nas. All nodes
+The experimental scenario is composed by a private network containing the scanner node, a vulnerable wireless cam and a Cloud Nas. All nodes
 access Internet through a Netgear router. A Wireless cam and a remote router are
 added to the scenario and reachable from the private network through Internet.
 The IoT Security Checker was executed from the scanner node with following
@@ -120,7 +120,7 @@ all possibile authentications and exploits but using a maximum of 2 threads.
 
 
 ## Reference & Thanks
-- I wanna thank @[Enrico Milanese](https://www.linkedin.com/in/enricomilanese/) who inspired and really helped me with this project.
+- I wanna thank [Enrico Milanese](https://www.linkedin.com/in/enricomilanese/) who inspired and really helped me with this project.
 - Thanks to researchers of the University of Milan [Sesar Lab](http://sesar.di.unimi.it/), in particular Prof. Marco Anisetti, Dott. Filippo Gaudenzi and Prof. Claudio Ardagna)
 - Many thanks to all the researchers that inspired me with their work and effort to make these devices safer (see the link in the main feature section)
 
