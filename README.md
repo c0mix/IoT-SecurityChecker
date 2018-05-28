@@ -1,4 +1,7 @@
 # IoT-SecurityChecker
+[![python](https://img.shields.io/badge/python-3.4-blue.svg)](https://www.python.org/downloads/)
+![OS](https://img.shields.io/badge/OS-Ubuntu-orange.svg)
+
 This software was developed as part of my Master degree thesis project @ University of Milan in order to automate the discovery and exploitation process of IoT devices. This project aims to be a starting point for further research, a framework to be enriched with new modules, exploits and techniques. Actually IoT-SecurityChecker is able to identify any device present inside a network using a port scan application (masscan), perform different brute-force attacks and probe some IoT exploits against the identified targets to validate the presence of known vulnerabilities.
 ### Main Features
 Below is provided a list of the main activity and probe that IoT-SecurityCheker is able to perform:
@@ -19,14 +22,13 @@ Below is provided a list of the main activity and probe that IoT-SecurityCheker 
 ### Architecture
 ![alt text](/resources/images/architettura.png "Architecture")
 
-1. The Knowledge DB file (here you can see a small [sample](/resources/iotDetectionKeyword.txt)) contains all the information and data that have been acquired
+1. **The Knowledge DB** file (here you can see a small [sample](/resources/iotDetectionKeyword.txt)) contains all the information and data that have been acquired
 during the knowledge-building phase of the thesis. It can be updated on the
-fly as new information are collected (for exapmle looking for a new IoT product, exploit or manufacturer).
-2. The Scanner manages and starts the hosts discovery process, you can find all the ports and configuration in the dedicated [class](/scanners/Masscan_Scanner.py). The scanning op-
-erations are run using masscan (https://github.com/robertdavidgraham/masscan).
-3. Bruteforcers classes ara capable of executing a dictionary attack on the following services: ftp,
+fly as new information are collected (for example looking for a new IoT product, exploit or manufacturer).
+2. **The Scanner** manages and starts the hosts discovery process, you can find all the ports and configuration in the dedicated [class](/scanners/Masscan_Scanner.py). The scanning operations are run using masscan (https://github.com/robertdavidgraham/masscan).
+3. **Bruteforcers classes** are capable of executing a dictionary attack on the following services: ftp,
 telenet, ssh, http basic. The dictionary provided as wordlist are built based on the knowledge (in this repo you can find only small wordlists used for demo purpose).
-4. Exploit classes are able to execute a set of exploits that addresses well-know IoT
+4. **Exploit classes** are able to execute a set of exploits that addresses well-know IoT
 vulnerabilities. As for dictionary, the exploits list derives from the knowledge.
 The available exploits are 5 (plus one not public):
     - Cisco-PVC-2300 : the web camera Cisco PVC-2300 is affected by several
@@ -53,14 +55,12 @@ Command Execution attacks. The developed exploits verifies the vulnerability by 
     - CVE-2017-17101: several webcams and baby monitors from Apexis company are
 vulnerable to Credential Injection. An attacker by using a crafted http request may obtain full admin access. This vulnerability has been discovered
 during this work and has been marked by CVE-2017-17101.
-5. The Engine manages all operations and exchanges of information through all
+5. **The Engine** manages all operations and exchanges of information through all
 modules. The user can set up the scan and then the Engine is in charge of
 starting the scanning, redirect data to parser and then DBs, setting up the
 execution of the Exploiter and Authenticator based on the results.
-6. Utils It provides a series of functionality, for example validate input and output.
-7. The Parser classes handle and filters outputs from the different toolse integrated in the software and create also a human readable output.
-Result DB It stores all the information about the found services, hosts and
-devices.
+6. **Utils** provides a series of functionality, for example validate input and output.
+7. **The Parser classes** handle and filter outputs from many different tools integrated in the software and create also a human readable output.
 
 ## Setup & Run
 1. Install masscan, following the instruction (https://github.com/robertdavidgraham/masscan) and optionally patch it in order to add the timestamp field inside the scan output (https://hml.io/2016/01/20/masscan-logging-demystified/)
@@ -134,6 +134,4 @@ all possibile authentications and exploits but using a maximum of 2 threads.
 [7]: https://github.com/robertdavidgraham/masscan
 [8]: https://medium.com/@lorenzo.comi93/break-into-2k-ip-camera-cb65bbac9e8c
 ## Disclaimer
-- Tested on Debian and ubuntu 16.0x
-- written in python3
-- this software is not to be intede as ready to use
+This software was not tested in a real "wild" environment, use at your own risk! 
