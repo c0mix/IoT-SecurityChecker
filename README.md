@@ -121,7 +121,7 @@ all possibile authentications and exploits but using a maximum of 2 threads.
 
 ## Reference & Thanks
 - I wanna thank [Enrico Milanese](https://www.linkedin.com/in/enricomilanese/) who inspired and really helped me with this project.
-- Thanks to researchers of the University of Milan [Sesar Lab](http://sesar.di.unimi.it/), in particular Prof. Marco Anisetti, Dott. Filippo Gaudenzi and Prof. Claudio Ardagna)
+- Thanks to researchers of the University of Milan [Sesar Lab](http://sesar.di.unimi.it/), in particular Prof. Marco Anisetti, Dott. Filippo Gaudenzi and Prof. Claudio Ardagna
 - Many thanks to all the researchers that inspired me with their work and effort to make these devices safer (see the link in the main feature section)
 
 
